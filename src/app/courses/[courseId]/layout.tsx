@@ -27,6 +27,14 @@ export async function generateMetadata({
     title: course.seo.metaTitle,
     description: course.seo.metaDescription,
     keywords: course.seo.keywords,
+    openGraph: {
+      title: course.seo.metaTitle,
+      description: course.seo.metaDescription,
+    },
+    twitter: {
+      title: course.seo.metaTitle,
+      description: course.seo.metaDescription,
+    },
   };
 }
 

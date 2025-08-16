@@ -49,7 +49,6 @@ export default function ContactPage() {
     const fd = new FormData(form);
     const payload = {
       firstName: String(fd.get('firstName') || ''),
-      lastName: String(fd.get('lastName') || ''),
       phone: String(fd.get('phone') || ''),
       email: String(fd.get('email') || ''),
       course: String(fd.get('course') || ''),
@@ -82,7 +81,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="w-full bg-gradient-to-r from-orange-500 to-red-500 py-20">
+      <section className="w-full bg-gradient-to-r from-orange-500 to-red-500 py-20 rounded-xl">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -150,35 +149,19 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <form className="space-y-6" onSubmit={onSubmit}>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <label
-                        htmlFor="firstName"
-                        className="block text-sm font-medium mb-2"
-                      >
-                        Ім&#39;я *
-                      </label>
-                      <Input
-                        id="firstName"
-                        name="firstName"
-                        placeholder="Ваше ім'я"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="lastName"
-                        className="block text-sm font-medium mb-2"
-                      >
-                        Прізвище *
-                      </label>
-                      <Input
-                        id="lastName"
-                        name="lastName"
-                        placeholder="Ваше прізвище"
-                        required
-                      />
-                    </div>
+                  <div>
+                    <label
+                      htmlFor="firstName"
+                      className="block text-sm font-medium mb-2"
+                    >
+                      Ім&#39;я *
+                    </label>
+                    <Input
+                      id="firstName"
+                      name="firstName"
+                      placeholder="Ваше ім'я"
+                      required
+                    />
                   </div>
 
                   <div>

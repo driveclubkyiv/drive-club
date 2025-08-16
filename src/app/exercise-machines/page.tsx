@@ -18,6 +18,16 @@ export const metadata: Metadata = {
   title: 'Тренажери та вправи - Drive Club',
   description:
     'Сучасні тренажери для підготовки водіїв: Batak Pro, симулятори водіння, вправи на реакцію та координацію. Професійне обладнання для ефективного навчання.',
+  openGraph: {
+    title: 'Тренажери та вправи - Drive Club',
+    description:
+      'Сучасні тренажери для підготовки водіїв: Batak Pro, симулятори водіння, вправи на реакцію та координацію. Професійне обладнання для ефективного навчання.',
+  },
+  twitter: {
+    title: 'Тренажери та вправи - Drive Club',
+    description:
+      'Сучасні тренажери для підготовки водіїв: Batak Pro, симулятори водіння, вправи на реакцію та координацію. Професійне обладнання для ефективного навчання.',
+  },
 };
 
 export default function ExercisePage() {
@@ -146,8 +156,8 @@ export default function ExercisePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-500 to-red-500 py-20 pt-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/patterns/tech-bg.png')] opacity-10"></div>
+      <section className="bg-gradient-to-r from-orange-500 to-red-500 py-20 pt-20 overflow-hidden rounded-xl">
+        <div className="absolute inset-0 opacity-10"></div>
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center text-white">
             <div className="flex items-center justify-center gap-3 mb-6">
@@ -208,7 +218,7 @@ export default function ExercisePage() {
                 {simulators.map((simulator, index) => (
                   <Card
                     key={index}
-                    className="overflow-hidden hover:shadow-lg transition-shadow"
+                    className="overflow-hidden hover:shadow-lg transition-shadow duration-300"
                   >
                     <div className="aspect-video relative">
                       <Image

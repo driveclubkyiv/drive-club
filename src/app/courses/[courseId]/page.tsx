@@ -28,8 +28,8 @@ export default function CoursePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-500 to-red-500 py-20 pt-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/patterns/course-bg.png')] opacity-10"></div>
+      <section className="bg-gradient-to-r from-orange-500 to-red-500 py-20 pt-32 overflow-hidden rounded-xl">
+        <div className="absolute inset-0 opacity-10"></div>
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center text-white">
             <Badge className="bg-white/20 text-white border-white/30 mb-6 px-4 py-2">
@@ -100,7 +100,7 @@ export default function CoursePage() {
                                     key={itemIndex}
                                     className="flex items-start gap-2"
                                   >
-                                    <div className="w-2 h-2 bg-gradient-to-r from-orange-50 to-red-50 rounded-full mt-2 flex-shrink-0" />
+                                    <div className="w-2 h-2 bg-gradient-to-b from-orange-500 to-white rounded-full mt-2 flex-shrink-0" />
                                     <span className="text-sm">{item}</span>
                                   </li>
                                 );
@@ -119,7 +119,7 @@ export default function CoursePage() {
                                               key={childIndex}
                                               className="flex items-start gap-2"
                                             >
-                                              <div className="w-2 h-2 bg-gradient-to-r from-orange-50 to-red-50 rounded-full mt-2 flex-shrink-0" />
+                                              <div className="w-2 h-2 bg-gradient-to-b from-orange-500 to-white rounded-full mt-2 flex-shrink-0" />
                                               <span className="text-sm">
                                                 {child}
                                               </span>

@@ -29,6 +29,16 @@ export const metadata: Metadata = {
   title: 'Безпечне водіння - Drive Club',
   description:
     '20 найважливіших порад для безпечного водіння. Захисне водіння та техніки безпеки на дорозі.',
+  openGraph: {
+    title: 'Безпечне водіння - Drive Club',
+    description:
+      '20 найважливіших порад для безпечного водіння. Захисне водіння та техніки безпеки на дорозі.',
+  },
+  twitter: {
+    title: 'Безпечне водіння - Drive Club',
+    description:
+      '20 найважливіших порад для безпечного водіння. Захисне водіння та техніки безпеки на дорозі.',
+  },
 };
 
 const safetyTips = [
@@ -216,8 +226,8 @@ export default function SafeDrivePage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-500 to-red-500 py-20 pt-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/patterns/safety-bg.png')] opacity-10"></div>
+      <section className="bg-gradient-to-r from-orange-500 to-red-500 py-20 pt-20 overflow-hidden rounded-xl">
+        <div className="absolute inset-0 opacity-10"></div>
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center text-white">
             <div className="flex items-center justify-center gap-3 mb-6">

@@ -72,7 +72,7 @@ export function Navbar() {
                   {/*<Zap className="absolute -top-1 -right-1 h-2 w-2 sm:h-3 sm:w-3 text-yellow-300 animate-pulse" />*/}
                 </div>
                 <div className="flex flex-col min-w-0">
-                  <span className="font-bold text-lg sm:text-xl bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent group-hover:from-orange-600 group-hover:to-red-600 transition-all duration-300 truncate">
+                  <span className="font-bold text-lg sm:text-xl bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent group-hover:from-orange-600 group-hover:to-red-600 transition-colors duration-400 truncate">
                     Drive Club
                   </span>
                   <span className="text-xs text-gray-500 hidden sm:block font-medium truncate">

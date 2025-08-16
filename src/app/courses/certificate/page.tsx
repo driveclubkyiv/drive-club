@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -17,6 +16,16 @@ export const metadata: Metadata = {
     'Drive Club',
     'курси водіння',
   ],
+  openGraph: {
+    title: 'Подарунковий сертифікат - Drive Club',
+    description:
+      'Подарунковий сертифікат на навчання водінню - ідеальний подарунок для близьких. Різні номінали, тривалий термін дії, можливість вибору курсу.',
+  },
+  twitter: {
+    title: 'Подарунковий сертифікат - Drive Club',
+    description:
+      'Подарунковий сертифікат на навчання водінню - ідеальний подарунок для близьких. Різні номінали, тривалий термін дії, можливість вибору курсу.',
+  },
 };
 
 export default function CertificatePage() {
@@ -96,17 +105,11 @@ export default function CertificatePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[500px] flex items-center justify-center">
-        <Image
-          src="/images/certificate-hero.jpg"
-          alt="Подарунковий сертифікат Drive Club"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black/50" />
+      <section className="relative py-20 pt-20 bg-gradient-to-r from-orange-500 to-red-500 overflow-hidden rounded-xl">
+        <div className="absolute inset-0 opacity-10"></div>
         <div className="relative z-10 text-center text-white px-4">
           <div className="flex justify-center mb-6">
-            <Gift className="h-20 w-20 text-primary" />
+            <Gift className="h-20 w-20" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Подарунковий сертифікат
@@ -115,9 +118,6 @@ export default function CertificatePage() {
             Ідеальний подарунок для тих, хто хоче навчитися водити або підвищити
             свою кваліфікацію
           </p>
-          <Button size="lg" className="text-lg px-8 py-6">
-            <a href="tel:0639806051">Замовити сертифікат</a>
-          </Button>
         </div>
       </section>
 

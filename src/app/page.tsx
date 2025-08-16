@@ -141,7 +141,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative aspect-[4/5] sm:aspect-[16/9] min-h-[380px] md:min-h-[560px] flex items-center justify-center overflow-hidden w-full">
+      <section className="relative aspect-[4/5] sm:aspect-[16/9] min-h-[380px] md:min-h-[560px] flex items-center justify-center overflow-hidden w-full rounded-xl">
         <motion.div
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}

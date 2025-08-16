@@ -17,7 +17,6 @@ function escapeHTML(str = '') {
 
 enum RequiredFieldUA {
   firstName = "Ім'я",
-  lastName = 'Прізвище',
   phone = 'Телефон',
 }
 
@@ -28,7 +27,7 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     // required fields (with UA labels)
-    const required: RequiredKey[] = ['firstName', 'lastName', 'phone'];
+    const required: RequiredKey[] = ['firstName', 'phone'];
     for (const key of required) {
       if (!body?.[key] || String(body[key]).trim() === '') {
         const label = RequiredFieldUA[key];
@@ -62,7 +61,6 @@ export async function POST(req: Request) {
     const text =
       `<b>Нова заявка з сайту Drive Club</b>\n` +
       `\n<b>Ім'я:</b> ${escapeHTML(val(body.firstName))}` +
-      `\n<b>Прізвище:</b> ${escapeHTML(val(body.lastName))}` +
       `\n<b>Телефон:</b> ${escapeHTML(val(body.phone))}` +
       `\n<b>Email:</b> ${escapeHTML(val(body.email))}` +
       `\n<b>Курс:</b> ${escapeHTML(val(body.course))}` +

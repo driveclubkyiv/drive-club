@@ -10,6 +10,16 @@ export const metadata: Metadata = {
   title: 'Програми навчання - Drive Club',
   description:
     'Професійні програми підготовки водіїв: для новачків, підвищення кваліфікації, захисне водіння. Досвідчені інструктори, сучасні тренажери.',
+  openGraph: {
+    title: 'Програми навчання - Drive Club',
+    description:
+      'Професійні програми підготовки водіїв: для новачків, підвищення кваліфікації, захисне водіння. Досвідчені інструктори, сучасні тренажери.',
+  },
+  twitter: {
+    title: 'Програми навчання - Drive Club',
+    description:
+      'Професійні програми підготовки водіїв: для новачків, підвищення кваліфікації, захисне водіння. Досвідчені інструктори, сучасні тренажери.',
+  },
 };
 
 const features = [
@@ -39,8 +49,8 @@ export default function CoursesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50/30 via-white to-red-50/30">
       {/* Hero Section */}
-      <section className="relative py-20 pt-20 bg-gradient-to-r from-orange-500 to-red-500 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/patterns/driving-bg.png')] opacity-10"></div>
+      <section className="relative py-20 pt-20 bg-gradient-to-r from-orange-500 to-red-500 overflow-hidden rounded-xl">
+        <div className="absolute inset-0 opacity-10"></div>
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center text-white">
             <Badge className="bg-white/20 text-white border-white/30 mb-6 px-4 py-2">

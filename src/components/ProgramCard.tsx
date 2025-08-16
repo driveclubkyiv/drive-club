@@ -94,7 +94,7 @@ export function ProgramCard({
 
             <motion.div
               transition={{ duration: 0.3, ease: 'easeOut' }}
-              className="absolute bottom-4 left-4 right-4 translate-y-full opacity-0 transform-gpu transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100 motion-reduce:transition-none motion-reduce:transform-none"
+              className="absolute bottom-4 left-4 right-4 translate-y-full opacity-0 transform-gpu transition-all duration-400 ease-out group-hover:translate-y-0 group-hover:opacity-100 motion-reduce:transition-none motion-reduce:transform-none"
             >
               <div className="bg-white/95 backdrop-blur-sm rounded-lg p-3">
                 <div className="flex items-center justify-between">
