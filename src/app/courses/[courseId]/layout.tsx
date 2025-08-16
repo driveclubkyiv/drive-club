@@ -2,13 +2,6 @@ import type React from 'react';
 import type { Metadata } from 'next';
 import { COURSES_LIST } from '@/constant/courses/COURSES_LIST.constant';
 
-interface CourseLayoutProps {
-  children: React.ReactNode;
-  params: {
-    courseId: string;
-  };
-}
-
 export async function generateStaticParams() {
   return COURSES_LIST.map((course) => ({
     courseId: course.id,
@@ -17,8 +10,12 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({
   params,
-}: CourseLayoutProps): Promise<Metadata> {
-  const course = COURSES_LIST.find((c) => c.id === params.courseId);
+}: {
+  params: Promise<{ courseId: string }>;
+}): Promise<Metadata> {
+  const { courseId } = await params;
+
+  const course = COURSES_LIST.find((c) => c.id === courseId);
 
   if (!course) {
     return {
@@ -33,6 +30,10 @@ export async function generateMetadata({
   };
 }
 
-export default function CourseLayout({ children }: CourseLayoutProps) {
+export default function CourseLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return <>{children}</>;
 }
