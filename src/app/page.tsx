@@ -132,7 +132,7 @@ export default function HomePage() {
       socialLinks: [
         {
           platform: 'facebook' as const,
-          url: 'https://www.facebook.com/alexandr.gorbik.7',
+          url: 'https://www.facebook.com/alexandr.gorbik.7?mibextid=LQQJ4d&rdid=9QkZUHy2S0FWLLH6&share_url=https://www.facebook.com/share/qp69FoN2pi33oYqR/?mibextid%3DLQQJ4d',
         },
       ],
     },
