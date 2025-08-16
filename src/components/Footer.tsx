@@ -1,4 +1,5 @@
-import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import Link from 'next/link';
 
 export function Footer() {
   return (
@@ -8,8 +9,12 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="font-bold text-lg text-primary">Drive Club</div>
-            <p className="text-sm text-muted-foreground">Центр спеціальної підготовки водіїв</p>
-            <p className="text-sm text-muted-foreground">18+ років професійного досвіду у навчанні водіїв</p>
+            <p className="text-sm text-muted-foreground">
+              Центр спеціальної підготовки водіїв
+            </p>
+            <p className="text-sm text-muted-foreground">
+              18+ років професійного досвіду у навчанні водіїв
+            </p>
           </div>
 
           {/* Schedule */}
@@ -31,8 +36,8 @@ export function Footer() {
             <div className="space-y-3">
               <div className="space-y-2">
                 {[
-                  { number: "0639806051", display: "(063) 980-60-51" },
-                  { number: "0667824728", display: "(066) 782-47-28" },
+                  { number: '0639806051', display: '(063) 980-60-51' },
+                  { number: '0667824728', display: '(066) 782-47-28' },
                 ].map((phone) => (
                   <a
                     key={phone.number}
@@ -60,7 +65,13 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>вул. Велика Васильківська, 55А, Київ</span>
+                <Link
+                  href="https://www.google.com/maps/place/CGJF%2BRP+Драйв+Клуб+центр+спеціальної+підготовки+водіїв,+Київ,+02000/data=!4m2!3m1!1s0x40d4c7a84feb0b25:0x12b542c6f00ab042?sa=X&ved=1t:242&hl=ru&gl=UA&ictx=111"
+                  target="_blank"
+                  className="hover:text-orange-500 transition-colors duration-300"
+                >
+                  вул. Велика Васильківська, 55А, Київ
+                </Link>
               </div>
             </div>
           </div>
@@ -68,9 +79,11 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t mt-8 pt-8 text-center">
-          <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} Drive Club. Всі права захищені.</p>
+          <p className="text-xs text-muted-foreground">
+            © {new Date().getFullYear()} Drive Club. Всі права захищені.
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

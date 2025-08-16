@@ -141,22 +141,22 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden w-full">
+      <section className="relative aspect-[4/5] sm:aspect-[16/9] min-h-[380px] md:min-h-[560px] flex items-center justify-center overflow-hidden w-full">
         <motion.div
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5, ease: 'easeOut' }}
-          className="absolute inset-0"
+          className="absolute inset-0 rounded-lg"
         >
           <Image
-            src="/images/hero.jpg"
+            src="https://cle7tknx9i41ej9x.public.blob.vercel-storage.com/header-c.png"
             alt="Drive Club - Центр спеціальної підготовки водіїв"
             fill
-            className="object-cover"
+            className="object-cover rounded-lg"
             priority
           />
         </motion.div>
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/50 rounded-lg" />
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -175,7 +175,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
-            className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-pretty"
           >
             ЦЕНТР СПЕЦІАЛЬНОЇ ПІДГОТОВКИ ВОДІЇВ
           </motion.p>
@@ -397,7 +397,7 @@ export default function HomePage() {
                         blurb={course.subtitle}
                         priceFrom={minPrice}
                         href={`/courses/${course.id}`}
-                        img={`/images/programs/${course.id}-card.png`}
+                        img={course.imgLink}
                         duration={course.duration.label}
                         featured={course.id === 'novice-course'}
                       />
@@ -420,7 +420,7 @@ export default function HomePage() {
                     blurb="Ідеальний подарунок для тих, хто хоче навчитися водити"
                     priceFrom={2000}
                     href="/courses/certificate"
-                    img="/images/programs/certificate-card.png"
+                    img="https://cle7tknx9i41ej9x.public.blob.vercel-storage.com/programs/cert-u-min.jpeg"
                   />
                 </motion.div>
               </div>

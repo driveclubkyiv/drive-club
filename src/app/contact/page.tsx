@@ -286,7 +286,7 @@ export default function ContactPage() {
           <h2 className="text-3xl font-bold text-center mb-8">Як нас знайти</h2>
           <div className="relative aspect-auto lg:aspect-video min-h-96 rounded-lg overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.3709260492597!2d30.515767977119193!3d50.432237971588734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf02b2e20f15%3A0xdb19e1dac7cb6a9c!2z0YPQuy4g0JHQvtC70YzRiNCw0Y8g0JLQsNGB0LjQu9GM0LrQvtCy0YHQutCw0Y8sIDU10JAsINCa0LjQtdCyLCDQmtC40LXQstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAwMzE1MA!5e1!3m2!1sru!2sua!4v1755353223603!5m2!1sru!2sua"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.829076723104!2d30.524351!3d50.4317414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c7a84feb0b25%3A0x12b542c6f00ab042!2z0JTRgNCw0LnQsiDQmtC70YPQsSDRhtC10L3RgtGAINGB0L_QtdGG0ZbQsNC70YzQvdC-0Zcg0L_RltC00LPQvtGC0L7QstC60Lgg0LLQvtC00ZbRl9Cy!5e1!3m2!1sru!2sua!4v1755359962767!5m2!1sru!2sua"
               className="absolute inset-0 h-full w-full rounded-lg border-0 opacity-0 translate-y-2
                transition-all duration-500 ease-out
                data-[loaded=true]:opacity-100 data-[loaded=true]:translate-y-0 data-[loaded=true]:border-2 data-[loaded=true]:border-primary

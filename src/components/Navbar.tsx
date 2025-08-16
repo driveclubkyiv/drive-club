@@ -61,12 +61,15 @@ export function Navbar() {
                 className="flex items-center space-x-2 sm:space-x-3 group flex-shrink-0"
               >
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl blur-sm opacity-75 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="relative bg-gradient-to-r from-orange-500 to-red-500 p-2 sm:p-3 rounded-xl group-hover:scale-105 transition-transform duration-300">
-                    <Image src="/logo.png" alt="Logo" width={35} height={35} />
-                    {/*<Car className="h-4 w-4 sm:h-5 sm:w-5 text-white" />*/}
-                    {/*<Zap className="absolute -top-1 -right-1 h-2 w-2 sm:h-3 sm:w-3 text-yellow-300 animate-pulse" />*/}
-                  </div>
+                  <Image
+                    src="/logo.png"
+                    alt="Logo"
+                    width={70}
+                    height={70}
+                    className="group-hover:opacity-100 transition-opacity duration-300"
+                  />
+                  {/*<Car className="h-4 w-4 sm:h-5 sm:w-5 text-white" />*/}
+                  {/*<Zap className="absolute -top-1 -right-1 h-2 w-2 sm:h-3 sm:w-3 text-yellow-300 animate-pulse" />*/}
                 </div>
                 <div className="flex flex-col min-w-0">
                   <span className="font-bold text-lg sm:text-xl bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent group-hover:from-orange-600 group-hover:to-red-600 transition-all duration-300 truncate">

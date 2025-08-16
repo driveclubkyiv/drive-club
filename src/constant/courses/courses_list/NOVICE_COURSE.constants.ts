@@ -14,7 +14,8 @@ export const NOVICE_COURSE: Course = {
   },
   description:
     'В програму входять основні елементи теорії руху автомобіля та їх вплив на керування автомобілем. Пасивна та активна безпека. Місце водія та його посадка.',
-
+  imgLink:
+    'https://cle7tknx9i41ej9x.public.blob.vercel-storage.com/programs/novice-u-min.jpg',
   program: [
     {
       title: 'Комплекс вправ тренажерної підготовки',

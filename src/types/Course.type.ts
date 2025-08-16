@@ -17,6 +17,7 @@ export type Course = {
   duration: { label: string; minutes: number }; // "1 год 30 хв", 90
   location: { label: string; city: string; country: string };
   description: string;
+  imgLink: string;
   program: ProgramSection[];
   notes?: string[];
   pricing: {

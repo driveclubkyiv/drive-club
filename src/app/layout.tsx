@@ -21,7 +21,10 @@ export const metadata: Metadata = {
     'Ццентр спеціальної підготовки водіїв з понад 18-річним досвідом роботи. Ми спеціалізуємося на професійному навчанні водіїв різного рівня підготовки.',
   icons: {
     // Favicons
-    icon: [{ url: '/favicon.ico', sizes: '48x48', type: 'image/x-icon' }],
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48', type: 'image/x-icon' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+    ],
   },
   openGraph: {
     title: 'Drive Club - Центр спеціальної підготовки водіїв',
