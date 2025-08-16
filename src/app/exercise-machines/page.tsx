@@ -4,7 +4,15 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Gamepad2, Target, Zap, Eye, Brain, Timer } from 'lucide-react';
+import {
+  Gamepad2,
+  Target,
+  Zap,
+  Eye,
+  Brain,
+  Timer,
+  LoaderPinwheelIcon,
+} from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Тренажери та вправи - Drive Club',
@@ -15,7 +23,7 @@ export const metadata: Metadata = {
 export default function ExercisePage() {
   const simulators = [
     {
-      name: 'Batak Pro',
+      name: 'Репліка Batak Pro',
       description:
         'Професійний тренажер для розвитку реакції, координації та периферійного зору',
       features: [
@@ -24,47 +32,75 @@ export default function ExercisePage() {
         'Периферійний зір',
         'Концентрація уваги',
       ],
-      image: '/images/simulators/batak-pro.jpg',
+      image:
+        'https://cle7tknx9i41ej9x.public.blob.vercel-storage.com/machines/batak-c.jpg',
       category: 'Реакція та координація',
     },
     {
-      name: 'Симулятор водіння',
+      name: 'Reflex Glasses',
       description:
-        'Реалістичний симулятор для відпрацювання навичок водіння в безпечному середовищі',
-      features: [
-        'Реалістична фізика',
-        'Різні погодні умови',
-        'Міські та заміські траси',
-        'Аварійні ситуації',
-      ],
-      image: '/images/simulators/driving-simulator.jpg',
-      category: 'Практичне водіння',
-    },
-    {
-      name: 'Тренажер зору',
-      description:
-        'Спеціальні вправи для розвитку зорового сприйняття та швидкості обробки інформації',
+        'Тимчасово частково або повністю обмежують оглядовість для відпрацювання навички швидшого прийняття рішень в критичних ситуаціях',
       features: [
         'Швидкість сприйняття',
         "Зорова пам'ять",
         "Розпізнавання об'єктів",
         'Оцінка відстані',
       ],
-      image: '/images/simulators/vision-trainer.jpg',
+      image:
+        'https://cle7tknx9i41ej9x.public.blob.vercel-storage.com/machines/reflex-glass-c.jpg',
       category: 'Зорове сприйняття',
     },
     {
-      name: 'Психофізіологічний тренажер',
+      name: '“Flash rotation”',
       description:
-        'Комплексна система для оцінки та тренування психофізіологічних функцій водія',
+        'Тренажер з сенсорними клавішами‑лампами для тестування швидкісного обертання керма та реакції.',
       features: [
-        'Час реакції',
-        'Стійкість уваги',
-        'Стресостійкість',
-        'Емоційна стабільність',
+        'Швидкісне обертання керма',
+        'Розвиток реакції',
+        'Координація рук‑очей',
       ],
-      image: '/images/simulators/psycho-trainer.jpg',
-      category: 'Психологічна підготовка',
+      image:
+        'https://cle7tknx9i41ej9x.public.blob.vercel-storage.com/machines/flash-rotate-c.jpg',
+      category: 'Кермування та реакція',
+    },
+    {
+      name: 'Класичний тренажер кермування',
+      description:
+        'Класичний тренажер для напрацювання техніки прийомів точного швидкісного обертання.',
+      features: [
+        'Точність обертання',
+        'Швидкість роботи кермом',
+        'Стабільність траєкторії',
+      ],
+      image:
+        'https://cle7tknx9i41ej9x.public.blob.vercel-storage.com/machines/flash-react-c.jpg',
+      category: 'Кермування (точність)',
+    },
+    {
+      name: '“Перекидач”',
+      description:
+        'Тренажер, який імітує ДТП з перекиданням автомобіля для відпрацювання дій.',
+      features: [
+        'Алгоритм дій при перекиданні',
+        'Використання ременя та фіксація тіла',
+        'Психологічна готовність до нестандартних ситуацій',
+      ],
+      image:
+        'https://cle7tknx9i41ej9x.public.blob.vercel-storage.com/machines/upside-c.jpg',
+      category: 'Безпека та дії при ДТП',
+    },
+    {
+      name: 'Полігон критичних режимів',
+      description:
+        'Відпрацювання критичних і нестандартних поведінок автомобіля за будь-якої погоди.',
+      features: [
+        'Керування ковзанням (контркермування)',
+        'Гальмування та розгін на різних покриттях',
+        'Робота з газом і балансом авто',
+      ],
+      image:
+        'https://cle7tknx9i41ej9x.public.blob.vercel-storage.com/machines/artificial-ice-c.jpg',
+      category: 'Керованість у критичних режимах',
     },
   ];
 
@@ -78,13 +114,6 @@ export default function ExercisePage() {
       icon: <Zap className="h-6 w-6" />,
     },
     {
-      title: 'Координація рухів',
-      description: 'Тренування точності та координації рухів рук та ніг',
-      duration: '20-25 хвилин',
-      difficulty: 'Середній',
-      icon: <Target className="h-6 w-6" />,
-    },
-    {
       title: 'Периферійний зір',
       description: "Розвиток здатності помічати об'єкти боковим зором",
       duration: '10-15 хвилин',
@@ -92,11 +121,12 @@ export default function ExercisePage() {
       icon: <Eye className="h-6 w-6" />,
     },
     {
-      title: 'Концентрація уваги',
-      description: 'Вправи для підвищення концентрації та стійкості уваги',
+      title: 'Швидкість і точність руління',
+      description:
+        'Вправи для розвитку швидкості роботи кермом та точності траєкторії',
       duration: '25-30 хвилин',
       difficulty: 'Просунутий',
-      icon: <Brain className="h-6 w-6" />,
+      icon: <LoaderPinwheelIcon className="h-6 w-6" />,
     },
   ];
 
@@ -187,7 +217,7 @@ export default function ExercisePage() {
                         fill
                         className="object-cover"
                       />
-                      <div className="absolute top-4 left-4">
+                      <div className="absolute top-4 right-4">
                         <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white">
                           {simulator.category}
                         </Badge>
@@ -228,11 +258,11 @@ export default function ExercisePage() {
                 <h2 className="text-3xl font-bold text-center mb-12">
                   Типи вправ
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {exercises.map((exercise, index) => (
                     <Card
                       key={index}
-                      className="text-center hover:shadow-lg transition-shadow"
+                      className="text-center hover:shadow-lg transition-shadow duration-300"
                     >
                       <CardHeader>
                         <div className="flex justify-center mb-4">

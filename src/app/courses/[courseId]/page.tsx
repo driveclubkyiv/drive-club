@@ -333,7 +333,7 @@ export default function CoursePage() {
                       >
                         <div className="aspect-video relative">
                           <Image
-                            src={`/images/programs/${relatedCourse.id}-card.png`}
+                            src={relatedCourse.imgLink}
                             alt={relatedCourse.title}
                             fill
                             className="object-cover"
