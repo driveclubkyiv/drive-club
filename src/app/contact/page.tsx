@@ -122,11 +122,14 @@ export default function ContactPage() {
                     </CardHeader>
                     <CardContent>
                       {item.details.map((detail, idx) => (
-                        <p key={idx} className="font-semibold text-foreground">
+                        <p
+                          key={idx}
+                          className="font-semibold text-foreground text-pretty wrap-break-word"
+                        >
                           {detail}
                         </p>
                       ))}
-                      <p className="text-sm text-muted-foreground mt-2">
+                      <p className="text-sm text-muted-foreground mt-2 text-pretty wrap-break-word">
                         {item.description}
                       </p>
                     </CardContent>

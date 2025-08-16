@@ -67,7 +67,8 @@ export default function HomePage() {
         'Майстер спорту України міжнародного класу (2008).',
         'Автомобільний експерт, популяризатор автоспорту.',
       ],
-      image: '/images/instructors/mochanov.png',
+      image:
+        'https://cle7tknx9i41ej9x.public.blob.vercel-storage.com/instructors/mochanov-c.png',
       socialLinks: [
         {
           platform: 'facebook' as const,
@@ -83,7 +84,8 @@ export default function HomePage() {
         'Кандидат у майстри автомобільного спорту. Багаторазовий учасник та призер змагань з автослалому і ралі.',
         'Досвід роботи інструктором з контр-аварійної підготовки 14 років.',
       ],
-      image: '/images/instructors/hluza.png',
+      image:
+        'https://cle7tknx9i41ej9x.public.blob.vercel-storage.com/instructors/alex-c.png',
       socialLinks: [
         {
           platform: 'facebook' as const,
@@ -103,7 +105,8 @@ export default function HomePage() {
         'Багаторазовий учасник та призер змагань з автослалому і ралі.',
         'Досвід роботи інструктором з контр-аварійної підготовки 19 років',
       ],
-      image: '/images/instructors/stefanovych.png',
+      image:
+        'https://cle7tknx9i41ej9x.public.blob.vercel-storage.com/instructors/stefanovych-c.png',
       socialLinks: [
         {
           platform: 'facebook' as const,
@@ -124,7 +127,8 @@ export default function HomePage() {
         'Рекордсмен за кількістю стартів у ралі; єдиний штурман, що ставав чемпіоном з різними пілотами. 7 перемог в абсолюті на етапах чемпіонатів України.',
         'Досвід роботи інструктором по водінню більше 7 років.',
       ],
-      image: '/images/instructors/gorbik.png',
+      image:
+        'https://cle7tknx9i41ej9x.public.blob.vercel-storage.com/instructors/gorbik-c.png',
       socialLinks: [
         {
           platform: 'facebook' as const,

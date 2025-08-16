@@ -18,7 +18,23 @@ const robotoMono = Roboto_Mono({
 export const metadata: Metadata = {
   title: 'Drive Club - Центр спеціальної підготовки водіїв',
   description:
-    'Професійна підготовка водіїв у Києві. Базові навички, захисне водіння, спортивна підготовка. 18+ років досвіду.',
+    'Ццентр спеціальної підготовки водіїв з понад 18-річним досвідом роботи. Ми спеціалізуємося на професійному навчанні водіїв різного рівня підготовки.',
+  icons: {
+    // Favicons
+    icon: [{ url: '/favicon.ico', sizes: '48x48', type: 'image/x-icon' }],
+  },
+  openGraph: {
+    title: 'Drive Club - Центр спеціальної підготовки водіїв',
+    description:
+      'Центр спеціальної підготовки водіїв з понад 18-річним досвідом роботи. Ми спеціалізуємося на професійному навчанні водіїв різного рівня підготовки.',
+    locale: 'uk_UA',
+    type: 'website',
+  },
+  twitter: {
+    title: 'Drive Club - Центр спеціальної підготовки водіїв',
+    description:
+      'Центр спеціальної підготовки водіїв з понад 18-річним досвідом роботи. Ми спеціалізуємося на професійному навчанні водіїв різного рівня підготовки.',
+  },
 };
 
 export default function RootLayout({
@@ -27,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uk">
+    <html lang="uk_UA">
       <body className={`${inter.variable} ${robotoMono.variable} antialiased`}>
         <Navbar />
         <main className="min-h-screen">
