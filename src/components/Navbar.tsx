@@ -17,7 +17,7 @@ import Image from 'next/image';
 const navigationItems = [
   { name: 'Головна', href: '/' },
   { name: 'Програми', href: '/courses' },
-  { name: 'Тренажери', href: '/exercise' },
+  { name: 'Тренажери', href: '/exercise-machines' },
   { name: 'Захисне водіння', href: '/safe-drive' },
   { name: 'Контакти', href: '/contact' },
   { name: 'Про нас', href: '/about-us' },
