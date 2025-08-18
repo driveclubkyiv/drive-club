@@ -410,7 +410,7 @@ export default function ExercisePage() {
               </h2>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
                 Запишіться на пробне заняття та оцініть ефективність нашого
-                обладнання. Перше тренування на тренажерах входить у вартість
+                обладнання. Тренування на тренажерах входить у вартість
                 будь-якого курсу.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
