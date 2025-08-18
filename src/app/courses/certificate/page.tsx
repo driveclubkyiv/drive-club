@@ -66,6 +66,13 @@ export default function CertificatePage() {
       description: '1,5 год — авто центру',
       popular: false,
     },
+    {
+      name: 'Індивідуальний сертифікат',
+      amount: 'Сума за вашим бажанням',
+      description:
+        'Ви самі визначаєте суму сертифіката — подаруйте стільки, скільки хочете',
+      popular: false,
+    },
   ];
 
   const benefits = [
@@ -97,23 +104,26 @@ export default function CertificatePage() {
   const howItWorks = [
     {
       step: '1',
-      title: 'Оберіть кількість занять',
-      description: 'Визначте, скільки уроків бажаєте придбати',
+      title: 'Оберіть сертифікат',
+      description: 'Визначте номінал, який хочете подарувати',
     },
     {
       step: '2',
       title: 'Звʼяжіться з нами',
-      description: 'Зателефонуйте нам для оформлення замовлення',
+      description:
+        'Зателефонуйте нам або заповніть форму на сайті для того щоб ми вам передзвонили',
     },
     {
       step: '3',
       title: 'Отримайте сертифікат',
-      description: 'Електронний або друкований сертифікат зручним способом',
+      description:
+        'Сертифікат можна отримати самостійно або замовити доставку Новою поштою по всій Україні',
     },
     {
       step: '4',
-      title: 'Пройдіть заняття',
-      description: 'Навчайтесь на своєму авто або на авто центру',
+      title: 'Вручіть та активуйте',
+      description:
+        'Подаруйте сертифікат отримувачу — він активує його та записується на заняття у зручний час',
     },
   ];
 
@@ -158,37 +168,43 @@ export default function CertificatePage() {
             <h2 className="text-3xl font-bold text-center mb-12">
               Номінали сертифікатів
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
-              {certificateOptions.map((option, index) => (
-                <Card
-                  key={index}
-                  className={`relative overflow-hidden hover:shadow-lg transition-shadow duration-400 ${
-                    option.popular ? 'ring-2 ring-primary' : ''
-                  }`}
-                >
-                  {option.popular && (
-                    <div className="absolute top-4 right-4">
-                      <Badge className="bg-primary text-white">
-                        Популярний
-                      </Badge>
-                    </div>
-                  )}
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Gift className="h-8 w-8 text-primary" />
-                    </div>
-                    <CardTitle className="text-xl">{option.name}</CardTitle>
-                    <div className="text-3xl font-bold text-primary">
-                      {option.amount} ₴
-                    </div>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <p className="text-muted-foreground text-sm">
-                      {option.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {certificateOptions.map((option, index) => {
+                const isLast = index === certificateOptions.length - 1;
+                const cardClasses = [
+                  'relative overflow-hidden hover:shadow-lg transition-shadow duration-400',
+                  option.popular ? 'ring-2 ring-primary' : '',
+                  isLast ? 'lg:col-start-2' : '',
+                ]
+                  .join(' ')
+                  .trim();
+
+                return (
+                  <Card key={index} className={cardClasses}>
+                    {option.popular && (
+                      <div className="absolute top-4 right-4">
+                        <Badge className="bg-primary text-white">
+                          Популярний
+                        </Badge>
+                      </div>
+                    )}
+                    <CardHeader className="text-center">
+                      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Gift className="h-8 w-8 text-primary" />
+                      </div>
+                      <CardTitle className="text-xl">{option.name}</CardTitle>
+                      <div className="text-3xl font-bold text-primary">
+                        {option.amount} ₴
+                      </div>
+                    </CardHeader>
+                    <CardContent className="text-center">
+                      <p className="text-muted-foreground text-sm">
+                        {option.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           </section>
 

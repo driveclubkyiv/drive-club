@@ -6,7 +6,14 @@ import { COURSES_LIST } from '@/constant/courses/COURSES_LIST.constant';
 import { ProgramCard } from '@/components/ProgramCard';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle, Users, Award, Shield, RefreshCw } from 'lucide-react';
+import {
+  CheckCircle,
+  Users,
+  Award,
+  Shield,
+  RefreshCw,
+  MapPin,
+} from 'lucide-react';
 import { InstructorCard } from '@/components/InstructorCard';
 
 const fadeInUp = {
@@ -135,6 +142,30 @@ export default function HomePage() {
           url: 'https://www.facebook.com/alexandr.gorbik.7?mibextid=LQQJ4d&rdid=9QkZUHy2S0FWLLH6&share_url=https://www.facebook.com/share/qp69FoN2pi33oYqR/?mibextid%3DLQQJ4d',
         },
       ],
+    },
+  ];
+
+  const features = [
+    {
+      icon: CheckCircle,
+      title: '18+ років досвіду',
+      description: 'Перевірені методики та професійні інструктори',
+    },
+    {
+      icon: Award,
+      title: 'Сучасні тренажери',
+      description: 'Batak Pro та спеціалізоване обладнання',
+    },
+    {
+      icon: Shield,
+      title: 'Індивідуальний підхід',
+      description: 'Програми адаптовані під ваш рівень підготовки',
+    },
+    {
+      icon: MapPin,
+      title: 'Зручна локація',
+      description:
+        'Ми знаходимося у центрі Києва— легко дістатися з будь‑якого району',
     },
   ];
 
@@ -436,43 +467,27 @@ export default function HomePage() {
           variants={staggerContainer}
           className="py-16"
         >
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-full mx-auto">
             <motion.h2
               variants={fadeInUp}
               className="text-3xl font-bold text-center mb-12"
             >
               Чому обирають Drive Club
             </motion.h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: CheckCircle,
-                  title: '18+ років досвіду',
-                  description: 'Перевірені методики та професійні інструктори',
-                },
-                {
-                  icon: Award,
-                  title: 'Сучасні тренажери',
-                  description: 'Batak Pro та спеціалізоване обладнання',
-                },
-                {
-                  icon: Shield,
-                  title: 'Індивідуальний підхід',
-                  description: 'Програми адаптовані під ваш рівень підготовки',
-                },
-              ].map((feature, index) => {
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => {
                 const IconComponent = feature.icon;
                 return (
                   <motion.div
                     key={index}
                     variants={scaleIn}
                     transition={{ duration: 0.5, delay: index * 0.2 }}
-                    whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                    whileHover={{ y: -5, transition: { duration: 0.4 } }}
                     className="text-center"
                   >
                     <motion.div
                       whileHover={{ scale: 1.1, rotate: 5 }}
-                      transition={{ duration: 0.2 }}
+                      transition={{ duration: 0.4 }}
                       className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
                     >
                       <IconComponent className="h-8 w-8 text-primary" />
