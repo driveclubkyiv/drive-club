@@ -19,6 +19,7 @@ const navigationItems = [
   { name: 'Програми', href: '/courses' },
   { name: 'Тренажери', href: '/exercise-machines' },
   { name: 'Захисне водіння', href: '/safe-drive' },
+  { name: 'FAQ', href: '/faq' },
   { name: 'Контакти', href: '/contact' },
   { name: 'Про нас', href: '/about-us' },
 ];
@@ -101,7 +102,7 @@ export function Navbar() {
                 ))}
               </nav>
 
-              <div className="hidden lg:flex items-center flex-shrink-0">
+              <div className="hidden lg:invisible lg:flex xl:flex xl:visible items-center flex-shrink-0">
                 <Link href="/contact">
                   <Button className="relative overflow-hidden bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold px-4 lg:px-6 py-2 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm whitespace-nowrap">
                     <span className="relative z-10">Записатися</span>
