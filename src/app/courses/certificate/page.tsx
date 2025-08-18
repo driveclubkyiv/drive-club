@@ -31,74 +31,89 @@ export const metadata: Metadata = {
 export default function CertificatePage() {
   const certificateOptions = [
     {
-      name: 'Базовий сертифікат',
+      name: 'Новачок (свій автомобіль)',
       amount: 2000,
-      description: 'Покриває частину вартості будь-якого курсу',
+      description: '1,5 год — власний автомобіль',
       popular: false,
     },
     {
-      name: 'Стандартний сертифікат',
+      name: 'Новачок (авто центру)',
+      amount: 2300,
+      description: '1,5 год — авто центру',
+      popular: false,
+    },
+    {
+      name: 'Досвідчений (свій автомобіль)',
       amount: 3500,
-      description: 'Повна вартість курсу для новачків',
+      description: '1,5 год — власний автомобіль',
+      popular: false,
+    },
+    {
+      name: 'Досвідчений (авто центру)',
+      amount: 4000,
+      description: '1,5 год — авто центру',
+      popular: false,
+    },
+    {
+      name: 'Спец курс (свій автомобіль)',
+      amount: 4300,
+      description: '1,5 год — власний автомобіль',
       popular: true,
     },
     {
-      name: 'Преміум сертифікат',
-      amount: 4300,
-      description: 'Покриває курс підвищення кваліфікації',
+      name: 'Спец курс (авто центру)',
+      amount: 4800,
+      description: '1,5 год — авто центру',
       popular: false,
     },
-    // {
-    //   name: "VIP сертифікат",
-    //   amount: 7000,
-    //   description: "Спеціальна підготовка + додаткові послуги",
-    //   popular: false,
-    // },
   ];
 
   const benefits = [
     {
       icon: <Gift className="h-6 w-6 text-primary" />,
-      title: 'Універсальний подарунок',
-      description: 'Підходить для людей будь-якого віку та рівня підготовки',
+      title: 'Безмежні заняття',
+      description:
+        'Можна подарувати та придбати будь-яку кількість занять для рідних та друзів',
     },
     {
       icon: <Clock className="h-6 w-6 text-primary" />,
-      title: 'Тривалий термін дії',
-      description: 'Сертифікат дійсний протягом 12 місяців з дати покупки',
+      title: 'Розвиток реакції',
+      description:
+        'Заняття допомагають розвивати оперативність та швидкість реакції',
     },
     {
       icon: <Users className="h-6 w-6 text-primary" />,
-      title: 'Вибір курсу',
-      description: 'Можливість обрати будь-який курс відповідно до номіналу',
+      title: 'Для всіх рівнів',
+      description:
+        'Курси підходять як для новачків, так і для досвідчених водіїв',
     },
     {
       icon: <Award className="h-6 w-6 text-primary" />,
-      title: 'Професійне навчання',
-      description: 'Доступ до всіх наших програм та досвідчених інструкторів',
+      title: 'Яскраві емоції',
+      description: 'Отримуйте незабутні враження та впевненість за кермом',
     },
   ];
 
   const howItWorks = [
     {
       step: '1',
-      title: 'Оберіть номінал',
-      description: 'Виберіть сертифікат відповідно до бажаного курсу',
+      title: 'Оберіть кількість занять',
+      description: 'Визначте, скільки уроків бажаєте придбати',
     },
     {
       step: '2',
-      title: 'Оформіть замовлення',
-      description: 'Зателефонуйте нам або заповніть форму на сайті',
+      title: 'Звʼяжіться з нами',
+      description: 'Зателефонуйте нам для оформлення замовлення',
     },
     {
       step: '3',
       title: 'Отримайте сертифікат',
-      description: 'Красиво оформлений сертифікат готовий до вручення',
+      description: 'Електронний або друкований сертифікат зручним способом',
     },
     {
       step: '4',
-      title: 'Активуйте сертифікат',
-      description: 'Отримувач записується на курс за номером сертифіката',
+      title: 'Пройдіть заняття',
+      description: 'Навчайтесь на своєму авто або на авто центру',
     },
   ];
 
@@ -147,7 +162,7 @@ export default function CertificatePage() {
               {certificateOptions.map((option, index) => (
                 <Card
                   key={index}
-                  className={`relative overflow-hidden hover:shadow-lg transition-shadow ${
+                  className={`relative overflow-hidden hover:shadow-lg transition-shadow duration-400 ${
                     option.popular ? 'ring-2 ring-primary' : ''
                   }`}
                 >
@@ -178,7 +193,7 @@ export default function CertificatePage() {
           </section>
 
           {/* Benefits */}
-          <section className="mb-16 bg-muted/30 -mx-4 px-4 py-16">
+          <section className="mb-16 bg-muted/30 -mx-4 px-4 py-16 rounded-lg">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-12">
                 Переваги подарункового сертифіката
@@ -278,16 +293,16 @@ export default function CertificatePage() {
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <h4 className="font-semibold">Повернення</h4>
-                          <p className="text-sm text-muted-foreground">
-                            Невикористаний сертифікат можна повернути протягом
-                            30 днів
-                          </p>
-                        </div>
-                      </div>
+                      {/*<div className="flex items-start gap-3">*/}
+                      {/*  <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />*/}
+                      {/*  <div>*/}
+                      {/*    <h4 className="font-semibold">Повернення</h4>*/}
+                      {/*    <p className="text-sm text-muted-foreground">*/}
+                      {/*      Невикористаний сертифікат можна повернути протягом*/}
+                      {/*      30 днів*/}
+                      {/*    </p>*/}
+                      {/*  </div>*/}
+                      {/*</div>*/}
 
                       <div className="flex items-start gap-3">
                         <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
