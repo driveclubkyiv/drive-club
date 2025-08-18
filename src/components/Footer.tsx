@@ -70,7 +70,7 @@ export function Footer() {
                   target="_blank"
                   className="hover:text-orange-500 transition-colors duration-300"
                 >
-                  вул. Велика Васильківська, 55А, Київ
+                  НСК &#34;Олімпійський&#34;, ст. м. Палац Спорту
                 </Link>
               </div>
             </div>

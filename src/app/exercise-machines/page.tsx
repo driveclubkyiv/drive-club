@@ -180,10 +180,10 @@ export default function ExercisePage() {
                 Симулятори
               </Badge>
               <Badge className="bg-white/20 text-white border-white/30 px-4 py-2">
-                VR-тренажери
+                Cлизьке покриття
               </Badge>
               <Badge className="bg-white/20 text-white border-white/30 px-4 py-2">
-                Реакція
+                Швидкісне руління
               </Badge>
             </div>
           </div>
