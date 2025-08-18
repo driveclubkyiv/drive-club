@@ -172,9 +172,32 @@ const faqSections = [
   },
 ];
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqSections.flatMap((section) =>
+    section.questions.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        // replace newline characters so the answer becomes a plain string
+        text: faq.answer.replace(/\\n/g, ' ').replace(/•/g, ''),
+      },
+    }))
+  ),
+};
+
+// escape `<` characters to avoid XSS issues
+const faqJsonString = JSON.stringify(faqJsonLd).replace(/</g, '\\u003c');
+
 export default function FAQPage() {
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: faqJsonString }}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-orange-500 to-red-500 py-20 pt-20 rounded-xl">
         <div className="container mx-auto px-4">
