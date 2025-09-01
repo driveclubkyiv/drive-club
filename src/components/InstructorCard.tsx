@@ -54,7 +54,7 @@ export function InstructorCard({
       <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 h-full">
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/3 relative p-2 content-center">
-            <div className="aspect-[4/3] md:aspect-[3/4] relative overflow-hidden">
+            <div className="aspect-[3/4] relative overflow-hidden">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
@@ -64,7 +64,7 @@ export function InstructorCard({
                   src={image || '/placeholder.svg'}
                   alt={name}
                   fill
-                  className="object-contain md:object-cover rounded-lg"
+                  className="object-cover rounded-lg"
                 />
               </motion.div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 md:hover:opacity-100 transition-opacity duration-300 rounded-lg" />

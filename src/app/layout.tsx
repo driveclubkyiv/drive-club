@@ -52,11 +52,11 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.jpg',
         alt: 'Drive-club',
         width: 1200,
         height: 630,
-        type: 'image/png',
+        type: 'image/jpg',
       },
     ],
   },
@@ -67,11 +67,11 @@ export const metadata: Metadata = {
       'Центр спеціальної підготовки водіїв з понад 18-річним досвідом роботи. Ми спеціалізуємося на професійному навчанні водіїв різного рівня підготовки.',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.jpg',
         alt: 'Drive-club',
         width: 1200,
         height: 630,
-        type: 'image/png',
+        type: 'image/jpg',
       },
     ],
   },

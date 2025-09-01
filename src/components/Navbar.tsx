@@ -96,7 +96,7 @@ export function Navbar() {
                   >
                     {item.name}
                     {pathname === item.href && (
-                      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-orange-600 rounded-full" />
+                      <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-orange-600 rounded-full" />
                     )}
                   </Link>
                 ))}
